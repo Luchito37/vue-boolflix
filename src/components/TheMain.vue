@@ -3,9 +3,9 @@
         <div class="container">
             <div id="movieList" class="row">
                 <div class="col">
-                    <ul>
-                        <li v-for=" movie in listaDeiFilm" :key="movie.original_title">
-                            {{movie.original_title}}
+                    <ul class="list-unstyled">
+                        <li v-for=" (movie) in state.listaFilm" :key="movie">
+                            <filmCard :movie="movie"></filmCard>
                         </li>
                     </ul>
                 </div>
@@ -17,12 +17,17 @@
 
 <script>
 
-import {state} from"../store";
+import {state} from "../store"
+import filmCard from "./filmCard.vue"
 
 export default {
+    name:"TheMain",
+    components:{
+        filmCard
+    },
     computed:{
-        listaDeiFilm(){
-            return state.listaFilm;
+        state(){
+            return state;
         },
     },
 }
