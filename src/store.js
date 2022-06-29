@@ -6,14 +6,13 @@ export const state = Vue.observable({
     listaFilm: [],
     listaSerie: [],
     testoInserito: "",
-    genereRicercato: "",
     api_search: "https://api.themoviedb.org/3/search/"
 });
 
-export function ricercaFilm (genereRicercato){
+export function ricercaFilm (genereSelezionato){
     debugger
 
-    axios.get(state.api_search + genereRicercato, {
+    axios.get(state.api_search + genereSelezionato , {
 
     //pongo come variabile la query cosi da poterla modificre con l'inserimento nella searchbar    
 
@@ -23,8 +22,10 @@ export function ricercaFilm (genereRicercato){
         query: state.testoInserito
     }
     }).then((resp) => {
-        if(genereRicercato === "movie"){
+        if(genereSelezionato === "movie"){
             state.listaFilm = resp.data.results;
+        }else if(genereSelezionato === "tv"){
+            state.listaSerie = resp.data.results;
         }
         
     })

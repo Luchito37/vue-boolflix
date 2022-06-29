@@ -4,7 +4,8 @@
             <div class="container-fluid">
                 <a class="navbar-brand text-danger">BOOLFLIX</a>
                 <div class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="testoInserito">
+                    <input class="form-control me-2" type="search" placeholder="Search title.." aria-label="Search movie" v-model="testoInserito">
+                    <input class="form-control me-2" type="search" placeholder="Search genre.." aria-label="Search tv" v-model="genereScelto">
                     <button class="btn btn-outline-danger" type="submit" @click="TestoCercato">Cerca...</button>
                 </div>
             </div>
@@ -20,18 +21,22 @@ export default {
     data(){
         return{
             testoInserito: "",
+            genereScelto: "",
         }
     },
     methods:{
         TestoCercato(){
+            state.listaFilm = []
+
             state.testoInserito = this.testoInserito
-            ricercaFilm("movie")
+
+            ricercaFilm(this.genereScelto)
 
 
         }
     },
     mounted(){
-        ricercaFilm("movie")
+        ricercaFilm("")
     }
 }
 </script>
