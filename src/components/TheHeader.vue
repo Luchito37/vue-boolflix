@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand text-danger">BOOLFLIX</a>
                 <div class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="testoInserito" @keyup.enter="onTestoCercato">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="testoInserito">
                     <button class="btn btn-outline-danger" type="submit" @click="TestoCercato">Cerca...</button>
                 </div>
             </div>
