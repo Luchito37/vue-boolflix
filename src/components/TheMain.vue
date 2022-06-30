@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-dark">
+    <div>
         <div class="container bg-secondary border border-danger">
             <div id="movieList" class="row">
                 <div class="col">
