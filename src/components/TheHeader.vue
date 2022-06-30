@@ -2,7 +2,9 @@
     <div>
         <nav class="navbar bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand text-danger">BOOLFLIX</a>
+                <a class="navbar-brand text-danger">
+                    <img src="../assets/img/logo.png"  width="100" alt="">
+                </a>
                 <div class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search title.." aria-label="Search movie" v-model="testoInserito">
                     <input class="form-control me-2" type="search" placeholder="Search genre.." aria-label="Search tv" v-model="genereScelto">

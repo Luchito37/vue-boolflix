@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="container">
+    <div class="bg-dark">
+        <div class="container bg-secondary border border-danger">
             <div id="movieList" class="row">
                 <div class="col">
                     <ul class="list-unstyled d-flex flex-wrap justify-content-center mt-4">
